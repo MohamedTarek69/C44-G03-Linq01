@@ -108,14 +108,46 @@ namespace Session_01
 
             //-------------------------------------- Vedio 04 --------------------------------------
             #region What is LINQ
-            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+
+            #region Fluent Syntax
+            //1. Fluent Syntax
+
+            //1.1 Call "LINQ Operators" as Static Method
+            //List<int> OddNumbers = Enumerable.Where(Numbers, Num => Num % 2 == 1).ToList();
+
+            // 1.2 Call "LINQ Operators" As Extension Method [Recommended]
             //List<int> OddNumbers = Numbers.Where(Num => Num % 2 == 1).ToList();
 
             //foreach (int num in OddNumbers)
             //{
             //    Console.WriteLine(num);
             //}
+
+            #endregion
+
+            //-------------------------------------- Vedio 05 --------------------------------------
+            #region Query Syntax - Like SQL Server style
+            ////2. Query Syntax - Like SQL Server style
+
+            ////Select *
+            ////From Numbers N
+            ////Where N % 2 == 1
+
+            //var OddNumbers = from N in Numbers
+            //                 where N % 2 == 1
+            //                 select N;
+
+            //// Must Be Begin With Keyword 'From'
+            //// Must be End With Select Or Groupby
+
+            //foreach (int num in OddNumbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            #endregion
 
             #endregion
 
