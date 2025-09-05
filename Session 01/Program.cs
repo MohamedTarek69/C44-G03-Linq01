@@ -106,6 +106,19 @@ namespace Session_01
 
             #endregion
 
+            //-------------------------------------- Vedio 04 --------------------------------------
+            #region What is LINQ
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //List<int> OddNumbers = Numbers.Where(Num => Num % 2 == 1).ToList();
+
+            //foreach (int num in OddNumbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            #endregion
+
 
         }
     }
