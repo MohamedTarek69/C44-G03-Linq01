@@ -52,6 +52,23 @@ namespace Session_01
 
             #endregion
 
+            //-------------------------------------- Vedio 02 --------------------------------------
+            #region Exctention Methods
+            //int X = 12345;
+            ////X.
+            ////int Y = IntExtention.Reverse(X);
+            //int Y = X.Reverse();
+
+            //Console.WriteLine(Y);
+
+            //long Z = 123469789156;
+
+            //long A = Z.Reverse();
+
+            //Console.WriteLine(A);
+
+            #endregion
+
 
 
         }
