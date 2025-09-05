@@ -108,8 +108,19 @@ namespace Session_01
 
             //-------------------------------------- Vedio 04 --------------------------------------
             #region What is LINQ
-            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            //List<int> OddNumbers = Numbers.Where(Num => Num % 2 == 1).ToList();
+
+            //foreach (int num in OddNumbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            #endregion
+
+            //-------------------------------------- Vedio 05 --------------------------------------
+            #region Linq Syntax [Fluent Syntax - Query Syntax]
 
             #region Fluent Syntax
             //1. Fluent Syntax
@@ -127,7 +138,6 @@ namespace Session_01
 
             #endregion
 
-            //-------------------------------------- Vedio 05 --------------------------------------
             #region Query Syntax - Like SQL Server style
             ////2. Query Syntax - Like SQL Server style
 
@@ -151,6 +161,38 @@ namespace Session_01
 
             #endregion
 
+            //-------------------------------------- Vedio 06 --------------------------------------
+            #region LINQ Execution Ways
+
+            #region Deferred Execution [Latest Version of Data]
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //var OddNumbers = Numbers.Where(Num => Num % 2 == 1);
+
+            //Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
+
+            //foreach (int num in OddNumbers) // 1 3 5 7 9 11 13 15
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            #endregion
+
+            #region Immediate Execution
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //var OddNumbers = Numbers.Where(Num => Num % 2 == 1).ToList();
+
+            //Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
+
+            //foreach (int num in OddNumbers) // 1 3 5 7 9
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            #endregion
+
+            #endregion
 
         }
     }
