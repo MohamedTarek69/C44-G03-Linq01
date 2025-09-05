@@ -121,6 +121,7 @@ namespace Session_01
 
             //-------------------------------------- Vedio 05 --------------------------------------
             #region Linq Syntax [Fluent Syntax - Query Syntax]
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             #region Fluent Syntax
             //1. Fluent Syntax
