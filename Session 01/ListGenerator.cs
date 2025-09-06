@@ -12,6 +12,7 @@ namespace Session_01
     {
         public static List<Product> ProductList { get; set; }
         public static List<Customer> CustomerList { get; set; }
+        public static string[] DictionaryEnglish { get; set; }
 
         static ListGenerator()
         {
@@ -197,6 +198,8 @@ namespace Session_01
                                          Total = (decimal)o.Element("total")
                                      }).ToArray()
                             }).ToList();
+
+            DictionaryEnglish = File.ReadAllLines("dictionary_english.txt");
         }
     }
 }
