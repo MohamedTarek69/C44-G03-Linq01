@@ -333,7 +333,52 @@ namespace Session_01
             //{
             //    Console.WriteLine(item);
             //}
-            
+
+            #endregion
+
+            //-------------------------------------- Vedio 10 --------------------------------------
+            #region Ording Operators [Ascending , Descending , Reverse , ThenBy , ThenByDescending]
+
+            #region Get Products Ordered By Price Asc
+            //// 1. Fluent Syntax
+            //var Result = ProductList.OrderBy(P => P.UnitPrice);
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         orderby P.UnitPrice
+            //         select P;
+
+
+            #endregion
+
+            #region Get Products Ordered By Price Desc
+            //// 1. Fluent Syntax
+            //var Result = ProductList.OrderByDescending(P => P.UnitPrice);
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         orderby P.UnitPrice descending
+            //         select P;
+
+            #endregion
+
+            #region Get Products Ordered By Price Asc and Number Of Items In Stock
+            //// 1. Fluent Syntax
+            //var Result = ProductList.OrderBy(P => P.UnitPrice)
+            //                         .ThenBy(P => P.UnitsInStock)
+            //                         .Reverse();
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         orderby P.UnitPrice, P.UnitsInStock descending
+            //         select P;
+
+            #endregion
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
         }
