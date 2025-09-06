@@ -414,6 +414,36 @@ namespace Session_01
 
             #endregion
 
+            //-------------------------------------- Vedio 12 --------------------------------------
+            #region  Aggregate Operators  - Immediate Execution
+            //var MaxLenght = ProductList.Max(P => P.UnitPrice);
+
+            //var Result = (from P in ProductList
+            //             where P.ProductName?.Length == MaxLenght
+            //             select P).FirstOrDefault();
+
+            //Console.WriteLine(Result);
+
+            //var Result = ProductList.Sum(P => P.UnitPrice);
+            //Console.WriteLine(Result);
+
+            //var Result = ProductList.Average(P => P.UnitPrice);
+            //Console.WriteLine(Result);
+
+            //string[] Names = { "Aya", "Omar", "Amr", "Mohamed" };
+
+            //var Result = Names.Aggregate((Str01, Str02) => $"{Str01} {Str02}");
+            // Str01 => Aya, Str02 => Omar
+            // Str01 => Aya Omar, Str02 => Amr
+            // Str01 => Aya Omar Amr, Str02 => Mohamed
+            // Str01 => Aya Omar Amr Mohamed, Str02 => 
+
+            //var Result = ProductList.Count(P=>P.UnitsInStock==0);
+            //Console.WriteLine(Result);
+
+            #endregion
+
         }
     }
 }
+    
