@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using static Session_01.ListGenerator;
 
 namespace Session_01
 {
@@ -195,6 +196,12 @@ namespace Session_01
 
             #endregion
 
+            //-------------------------------------- Vedio 07 --------------------------------------
+            #region Data Setup
+            //Console.WriteLine(ProductList[0]);
+            //Console.WriteLine(CustomerList[0]);
+
+            #endregion
         }
     }
 }
