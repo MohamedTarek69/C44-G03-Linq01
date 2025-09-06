@@ -9,8 +9,8 @@ namespace Session_01.Data
     class Product
     {
         public long ProductID { get; set; }
-        public string ProductName { get; set; }
-        public string Category { get; set; }
+        public string? ProductName { get; set; }
+        public string? Category { get; set; }
         public decimal UnitPrice { get; set; }
         public int UnitsInStock { get; set; }
 

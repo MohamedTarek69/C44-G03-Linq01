@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using Session_01.Data;
 using static Session_01.ListGenerator;
 
 namespace Session_01
@@ -237,16 +238,104 @@ namespace Session_01
 
             #region Get First 10 Products That Are Out Of Stock
             //// Fluent Syntax Only
+            //// Indexed Where
             //var Result = ProductList.Where((P, I) => I < 10 && P.UnitsInStock == 0);
 
             #endregion
 
             #endregion
 
-            foreach (var item in Result)
-            {
-                Console.WriteLine(item);
-            }
+            //-------------------------------------- Vedio 09 --------------------------------------
+            #region Transformation [Projection] Operators [Select , Select Many]
+
+            #region Select Product Name
+            //// 1. Fluent Syntax
+            //var Result = ProductList.Select(p => p.ProductID);
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         select P.ProductID;
+
+            #endregion
+
+            #region Select Customer Name
+            //// 1. Fluent Syntax
+            //var Result = CustomerList.Select(c => c.CustomerName);
+
+            //// 2. Query Syntax
+            //Result = from C in CustomerList
+            //         select C.CustomerName;
+
+            #endregion
+
+            #region Select Customer Orders
+            //// 1. Fluent Syntax
+            //var Result = CustomerList.SelectMany(c => c.Orders);
+
+            //// 2. Query Syntax
+            //Result = from C in CustomerList
+            //         from O in C.Orders
+            //         select O;
+
+            #endregion
+
+            #region Select Product Id and Product Name
+            //// 1. Fluent Syntax
+            //var Result = ProductList.Select(p => new { p.ProductID, p.ProductName });
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         select new 
+            //         { 
+            //             P.ProductID, 
+            //             P.ProductName 
+            //         };
+
+            #endregion
+
+            #region Select Product In Stock And Apply Discount 10 % On Its Price
+            //// 1. Fluent Syntax
+            //var Result = ProductList.Where(p => p.UnitsInStock > 0)
+            //                        .Select(p => new
+            //                        {
+            //                            Id = p.ProductID,
+            //                            Name = p.ProductName,
+            //                            OldPrice = p.UnitPrice,
+            //                            NewPrice = p.UnitPrice - (p.UnitPrice * 0.1m)
+            //                        });
+
+            //// 2. Query Syntax
+            //Result = from P in ProductList
+            //         where P.UnitsInStock > 0
+            //         select new
+            //         {
+            //             Id = P.ProductID,
+            //             Name = P.ProductName,
+            //             OldPrice = P.UnitPrice,
+            //             NewPrice = P.UnitPrice - (P.UnitPrice * 0.1m)
+            //         };
+
+            #endregion
+
+            #region Get Product Index And Name that are In Stock
+            // Indexed Select
+
+            //var Result = ProductList.Where(P => P.UnitsInStock > 0)
+            //    .Select((P, I) => new
+            //    {
+            //        Index = I,
+            //        Name = P.ProductName
+            //    });
+
+            #endregion
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            
+            #endregion
+
         }
     }
 }
