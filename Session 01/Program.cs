@@ -381,6 +381,39 @@ namespace Session_01
             //}
             #endregion
 
+            //-------------------------------------- Vedio 11 --------------------------------------
+            #region Elements Operator - Immediate Execution [Valid Only With Fluent Syntax]
+            //List<Product> TestProduct = new List<Product>();
+
+            //var Result = ProductList.FirstOrDefault();
+            //Result = ProductList.FirstOrDefault(P => P.UnitsInStock == 0);
+
+            //var Result = TestProduct.LastOrDefault();
+            //Result = TestProduct.LastOrDefault(P => P.UnitsInStock == 0);
+
+            //var Result = ProductList.ElementAtOrDefault(0);
+
+            //var Result = ProductList.Single();
+            //var Result = ProductList.SingleOrDefault();
+
+            //Console.WriteLine(Result?.ProductName ?? "Not Found");
+
+            // Hypird Syntax => Fluent syntax + Query Syntax
+            // Hypird Syntax => (Query Syntax).Fluent syntax
+
+            //var Result = (from P in ProductList
+            //              where P.UnitsInStock == 0
+            //              select new
+            //              {
+            //                  P.ProductID,
+            //                  P.ProductName,
+            //                  P.UnitsInStock
+            //              }).FirstOrDefault();
+
+            //Console.WriteLine(Result);
+
+            #endregion
+
         }
     }
 }
