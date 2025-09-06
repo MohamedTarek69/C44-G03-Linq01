@@ -202,6 +202,51 @@ namespace Session_01
             //Console.WriteLine(CustomerList[0]);
 
             #endregion
+
+            //-------------------------------------- Vedio 08 --------------------------------------    
+            #region Filtration [Restrication] Operators - Where
+
+            #region Get Elements Out Of Stock
+            //// 1. Fluent Syntax
+            //var Result = ProductList.Where(P => P.UnitsInStock == 0);
+
+            //// 2. Query Syntax
+
+            ////Select *
+            ////From ProductList P
+            ////Where P.UnitsInStock == 0
+
+            //Result = from P in ProductList
+            //         where P.UnitsInStock == 0
+            //         select P;
+
+            #endregion
+
+            #region Get Elements In Stock And In Category Of Meat/Poultry
+
+            //// 1. Fluent Syntax
+            //var Result = ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Meat/Poultry");
+
+            //// 2. Query Syntax
+
+            //Result = from P in ProductList
+            //         where P.UnitsInStock > 0 && P.Category == "Meat/Poultry"
+            //         select P;
+
+            #endregion
+
+            #region Get First 10 Products That Are Out Of Stock
+            //// Fluent Syntax Only
+            //var Result = ProductList.Where((P, I) => I < 10 && P.UnitsInStock == 0);
+
+            #endregion
+
+            #endregion
+
+            foreach (var item in Result)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
