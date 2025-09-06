@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
 using System.Runtime.Intrinsics.Arm;
+using System.Text.RegularExpressions;
 using static Session_01.ListGenerator;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Session_01
 {
     internal class Program
@@ -281,6 +283,112 @@ namespace Session_01
 
             #endregion
 
+            #region LINQ – Transformation Operators
+
+            #region Q1
+            //1. Return a sequence of just the names of a list of products.
+
+            //var Result = from p in ProductList
+            //             select p.ProductName;
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q2
+            //2.Produce a sequence of the uppercase and lowercase versions of each word in the original array(Anonymous Types).
+
+            //string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+
+            //var Result = words.Select(w => new { Upper = w.ToUpper(), Lower = w.ToLower() });
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q3
+            //3.Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
+
+            //var Result = from p in ProductList
+            //             select new
+            //             {
+            //                 Id = p.ProductID,
+            //                 Name = p.ProductName,
+            //                 Price = p.UnitPrice
+            //             };
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q4
+            //4.Determine if the value of int in an array matches their position in the array.  
+
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var Result = Arr.Select((num, index) => new { Number = num, InPlace = (num == index) });
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine($"{item.Number} : {item.InPlace}");
+            //}
+
+            #endregion
+
+            #region Q5
+            //5.Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
+
+            //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //int[] numbersB = { 1, 3, 5, 7, 8 };
+
+
+            //var Result = from a in numbersA
+            //             from b in numbersB
+            //             where a < b
+            //             select new { A = a, B = b };
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine($"{item.A} Is less than {item.B}");
+            //}
+
+            #endregion
+
+            #region Q6
+            //6.Select all orders where the order total is less than 500.00.
+
+            //var Result= CustomerList.SelectMany(c => c.Orders).Where(o => o.Total < 500.00M);
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            #endregion
+
+            #region Q7
+            //7.Select all orders where the order was made in 1998 or later.
+
+            //var Result = CustomerList.SelectMany(c => c.Orders).Where(o => o.OrderDate.Year >= 1998);
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #endregion
 
         }
     }
